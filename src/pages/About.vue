@@ -8,7 +8,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
+    title: 'Carrie Scono | About Me'
   }
 }
 </script>
