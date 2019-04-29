@@ -9,7 +9,11 @@
         <g-link class="nav__link" to="/about">About</g-link>
       </nav>
     </header>
-    <slot/>
+    <transition name="slide" appear>
+      <main>
+        <slot/>
+      </main>
+    </transition>
   </div>
 </template>
 
@@ -21,9 +25,15 @@ query {
 }
 </static-query>
 
+<script>
+export default {
+}
+</script>
+
+
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: 'Open Sans';
   margin:0;
   padding:0;
   line-height: 1.5;
@@ -46,5 +56,21 @@ body {
 
 .nav__link {
   margin-left: 20px;
+}
+
+.slide-enter-active, .slide-leave-active {
+  transition: opacity .5s, transform 0.5s;
+}
+.slide-enter, .slide-leave-to {
+  opacity: 0;
+  transform: translateX(100px)
+}
+
+.fade-enter-active {
+  transition: opacity .5s;
+}
+
+.fade-enter {
+  opacity: 0;
 }
 </style>
