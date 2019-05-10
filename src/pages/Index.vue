@@ -33,8 +33,7 @@ body {
 }
 
 .glitch {
-  font-size: 9em;
-  font-weight: bold;
+  font-size: 7em;
   position: relative;
   z-index: 4;
     /* run for 0.5s, delay for 1.5s
@@ -76,13 +75,11 @@ body {
 .green-glitch {
   color: white;
   z-index: 3;
-  font-weight: bold;
 }
 
 .red-glitch {
   color: green;
   z-index: 2;
-  font-weight: bold;
 }
 
 @keyframes glitch-blue {
