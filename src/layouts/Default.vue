@@ -5,6 +5,7 @@
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about">About</g-link>
+        <g-link class="nav__link" to="/blog">Blog</g-link>
       </nav>
     </header>
     <transition name="slide" appear>
@@ -35,7 +36,7 @@ body {
   margin:0;
   padding:0;
   line-height: 1.5;
-  color: #EEE;
+  color: #333;
   font-weight: 100;
 }
 
@@ -43,16 +44,15 @@ body {
   font-family: 'Fredericka the Great';
   text-decoration: none;
   font-size: 4em;
-  color: #EEE;
+  color: #333;
 }
 
 .layout {
-  max-width: 760px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #333;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
 }
 
 .header {
@@ -69,7 +69,7 @@ body {
   transition: border 1s;
   text-decoration: none;
   position: relative;
-  color: #EEE;
+  color: #333;
   z-index: 1;
 }
 
@@ -79,26 +79,20 @@ body {
 
 .nav__link::after {
   content: " ";
+  transform: scaleX(0);
+  transition: transform 0.25s;
   height: 100%;
   width: 100%;
-  transform: scaleX(0);
-  background: #EEE;
   position: absolute;
   bottom: 0;
   right: 0;
-  transition: transform 0.25s;
-  z-index: 0;
+  background: #EEE;
 }
 
-.nav__link:hover::after {
+.nav__link:hover::after,
+.nav__link:active::after {
   content: " ";
-  height: 100%;
-  width: 100%;
   transform: scaleX(1.2);
-  background: #EEE;
-  position: absolute;
-  bottom: 0;
-  right: 0;
   transition: transform 0.25s;
   z-index: -1;
 }

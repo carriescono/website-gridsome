@@ -6,5 +6,14 @@
 
 module.exports = {
   siteName: 'Carrie Scono',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'posts/*.md',
+        typeName: 'BlogPost',
+        route: '/:slug'
+      }
+    }
+  ]
 }
