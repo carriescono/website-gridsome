@@ -26,7 +26,7 @@ body {
   background: #1f0023;
   font-size: calc(0.15em + 1vw);
 }
-.mc { margin-top: calc(50vh - 9em) }
+.mc { margin-top: calc(50vh - 7em) }
 .fit-content { width: fit-content; }
 .roboto {
   font-family: 'Roboto'
